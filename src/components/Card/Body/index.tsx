@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-export default function Body() {
+export default function Card() {
   return (
     <View>
-      <Text>Body</Text>
+      <Text className='flex-1 items-center justify-center bg-green-400'>
+        Body
+      </Text>
     </View>
   );
 }

@@ -1,10 +1,14 @@
 import { View, Text } from 'react-native';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function Header() {
+type CardProps = {
+  children: ReactNode;
+};
+
+export default function Card({ children }: CardProps) {
   return (
-    <View>
-      <Text>Header</Text>
+    <View className='flex-1 items-center justify-center bg-yellow-400'>
+      {children}
     </View>
   );
 }
