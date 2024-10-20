@@ -1,5 +1,6 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import React, { ReactNode } from 'react';
+import DecorativeLine from '../../DecoraviteLine';
 
 type CardProps = {
   children: ReactNode;
@@ -7,8 +8,11 @@ type CardProps = {
 
 export default function Card({ children }: CardProps) {
   return (
-    <View className='flex-1 items-center justify-center bg-yellow-400'>
-      {children}
+    <View className='flex justify-center items-center'>
+      <DecorativeLine />
+      <View className='w-248 h-48 shadow-basic bg-themys-dune rounded-lg border-l border-r border-b-2 border-themys-cod-gray/60 justify-center items-center'>
+        <>{children}</>
+      </View>
     </View>
   );
 }
