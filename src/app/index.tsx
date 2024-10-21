@@ -29,7 +29,7 @@ export default function Index() {
             keyExtractor={(user) => user.id.toString()}
           ></FlatList>
         </Card.Body>
-        <Card.Footer>
+        <Footer />
           <Text extraClass='text-base text-shadow-lg'>
             Developed by Adnir Andrade @ 2024
           </Text>
