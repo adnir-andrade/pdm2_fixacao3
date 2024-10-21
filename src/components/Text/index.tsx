@@ -4,15 +4,16 @@ import React from 'react';
 
 type TextProps = {
   children: string;
+  extraClass?: string;
 };
 
-export default function Text({ children }: TextProps) {
+export default function Text({ children, extraClass }: TextProps) {
   return (
-    <View>
-      <ReactText className='text-themys-soft-peach font-cinzel-medium text-lg'>
-        {children}
-      </ReactText>
-    </View>
+    <ReactText
+      className={`text-themys-soft-peach font-cinzel-medium text-lg ${extraClass}`}
+    >
+      {children}
+    </ReactText>
   );
 }
 
