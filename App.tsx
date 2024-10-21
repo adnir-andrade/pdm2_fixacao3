@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Index from './src/app';
 import {
@@ -44,18 +44,9 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <View className='flex-1 bg-white items-center justify-center'>
       <StatusBar style='auto' />
       <Index />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
