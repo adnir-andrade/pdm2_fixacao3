@@ -22,6 +22,24 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./node_modules/@expo-google-fonts/cinzel/Cinzel_400Regular.ttf",
+            "./node_modules/@expo-google-fonts/cinzel/Cinzel_500Medium.ttf",
+            "./node_modules/@expo-google-fonts/cinzel/Cinzel_600SemiBold.ttf",
+            "./node_modules/@expo-google-fonts/cinzel/Cinzel_700Bold.ttf",
+            "./node_modules/@expo-google-fonts/cinzel/Cinzel_800ExtraBold.ttf",
+            "./node_modules/@expo-google-fonts/cinzel/Cinzel_900Black.ttf",
+            "./node_modules/@expo-google-fonts/cinzel-decorative/CinzelDecorative_400Regular.ttf",
+            "./node_modules/@expo-google-fonts/cinzel-decorative/CinzelDecorative_700Bold.ttf",
+            "./node_modules/@expo-google-fonts/cinzel-decorative/CinzelDecorative_900Black.ttf"
+          ]
+        }
+      ]
+    ]
   }
 }
