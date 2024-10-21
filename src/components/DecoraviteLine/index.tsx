@@ -5,7 +5,7 @@ export default function DecorativeLine() {
   return (
     <Image
       source={require('../../../assets/images/Decoration.png')}
-      className='absolute top-0 w-[115%] h-full'
+      className='absolute top-0 w-[66%] h-full'
       resizeMode='contain'
     />
   );
