@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ['./App.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -11,6 +13,11 @@ module.exports = {
       },
       boxShadow: {
         basic: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+      },
+      textShadow: {
+        sm: '0 1px 2px rgba(0, 0, 0, 0.75)',
+        DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.75)',
+        lg: '3px 2px 2px rgba(0, 0, 0, 0.75)',
       },
       colors: {
         'themys-merlot': '#881821',
@@ -33,5 +40,16 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      );
+    }),
+  ],
 };
