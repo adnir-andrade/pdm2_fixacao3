@@ -1,6 +1,6 @@
 import { FlatList, View } from 'react-native';
 import Text from '../components/Text';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Card from '../components/Card';
 import users from '../mocks/MOCK_DATA';
 import Divider from '../components/Divider';
