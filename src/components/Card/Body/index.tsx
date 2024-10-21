@@ -1,12 +1,16 @@
 import { View, Text } from 'react-native';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function Card() {
+type CardProps = {
+  children: ReactNode;
+};
+
+export default function Card({ children }: CardProps) {
   return (
-    <View>
-      <Text className='flex-1 items-center justify-center bg-green-400'>
-        Body
-      </Text>
+    <View className='flex px-12'>
+      <View className='w-full h-[87%] py-4 bg-themys-dune rounded-lg border border-themys-straw'>
+        <>{children}</>
+      </View>
     </View>
   );
 }
