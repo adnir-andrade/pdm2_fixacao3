@@ -6,6 +6,7 @@ import users from '../mocks/MOCK_DATA';
 import Divider from '../components/Divider';
 import PressableItem from '../components/PressableItem';
 import HeaderLabel from '../components/HeaderLabel';
+import Footer from '../components/Footer';
 
 export default function Index() {
   const [activeUser, setActiveUser] = useState('Select User');
@@ -18,22 +19,16 @@ export default function Index() {
           <FlatList
             data={users}
             renderItem={({ item }) => (
-              <View className='flex flex-col space-y-4'>
-                <PressableItem
-                  text={item.username}
-                  onPress={() => setActiveUser(item.name)}
-                />
-                <Divider />
-              </View>
+              <PressableItem
+                text={item.username}
+                onPress={() => setActiveUser(item.name)}
+              />
             )}
             keyExtractor={(user) => user.id.toString()}
+            ItemSeparatorComponent={() => <Divider />}
           ></FlatList>
         </Card.Body>
         <Footer />
-          <Text extraClass='text-base text-shadow-lg'>
-            Developed by Adnir Andrade @ 2024
-          </Text>
-        </Card.Footer>
       </View>
     </>
   );
