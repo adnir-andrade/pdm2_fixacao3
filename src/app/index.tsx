@@ -7,26 +7,18 @@ import Divider from '../components/Divider';
 import PressableItem from '../components/PressableItem';
 import HeaderLabel from '../components/HeaderLabel';
 import Footer from '../components/Footer';
+import UserList from '../components/UserList';
+import useUser from '../states/useUser';
 
 export default function Index() {
-  const [activeUser, setActiveUser] = useState('Select User');
+  const { username } = useUser();
 
   return (
     <>
       <View className='flex-1 pt-36 bg-slate-900'>
-        <HeaderLabel title={activeUser} spacing='mb-8' />
+        <HeaderLabel title={username} spacing='mb-8' />
         <Card.Body>
-          <FlatList
-            data={users}
-            renderItem={({ item }) => (
-              <PressableItem
-                text={item.username}
-                onPress={() => setActiveUser(item.name)}
-              />
-            )}
-            keyExtractor={(user) => user.id.toString()}
-            ItemSeparatorComponent={() => <Divider />}
-          ></FlatList>
+          <UserList />
         </Card.Body>
         <Footer />
       </View>
