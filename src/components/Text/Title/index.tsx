@@ -8,7 +8,7 @@ type TextProps = {
 export default function Text({ children }: TextProps) {
   return (
     <>
-      <ReactText className='text-center text-themys-straw text-lg font-cinzel-bold'>
+      <ReactText className='text-center text-themys-straw text-lg font-cinzel-bold text-shadow-lg'>
         {children}
       </ReactText>
     </>
