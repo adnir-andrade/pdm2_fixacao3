@@ -9,7 +9,9 @@ type TextProps = {
 export default function Text({ children }: TextProps) {
   return (
     <View>
-      <ReactText>{children}</ReactText>
+      <ReactText className='text-themys-soft-peach font-cinzel-medium text-lg'>
+        {children}
+      </ReactText>
     </View>
   );
 }
