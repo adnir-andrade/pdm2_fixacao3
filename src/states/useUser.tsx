@@ -10,7 +10,7 @@ type Actions = {
 };
 
 const useUser = create<State & Actions>()((set) => ({
-  username: '',
+  username: 'No Active User',
   changeActiveUser: (newUsername: string) => {
     set({ username: newUsername });
   },
