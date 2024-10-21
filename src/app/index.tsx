@@ -30,7 +30,7 @@ export default function Index() {
           ></FlatList>
         </Card.Body>
         <Card.Footer>
-          <Text extraClass='text-sm text-shadow-lg'>
+          <Text extraClass='text-base text-shadow-lg'>
             Developed by Adnir Andrade @ 2024
           </Text>
         </Card.Footer>
