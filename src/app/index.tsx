@@ -33,7 +33,9 @@ export default function Index() {
           ></FlatList>
         </Card.Body>
         <Card.Footer>
-          <Text>Developed by Adnir Andrade</Text>
+          <Text extraClass='text-sm text-shadow-lg'>
+            Developed by Adnir Andrade @ 2024
+          </Text>
         </Card.Footer>
       </View>
     </>
