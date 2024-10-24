@@ -18,6 +18,7 @@
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-native": "0.74.5",
+    "react-native-ico-rpg-game": "^5.1.2",
     "zustand": "^5.0.0"
   },
   "devDependencies": {
